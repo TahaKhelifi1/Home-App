@@ -1,0 +1,123 @@
+.contact-section {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-intro > * + * {
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #ff7a00; /* Bright orange */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contact-description {
+  color: #000000; /* Dark orange */
+  text-align: center;
+}
+
+.form-group-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  color: #000000; /* Medium orange */
+  font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.5rem;
+  border: 1px solid #e67e22; /* Medium orange border */
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  background-color: #fff3e0; /* Light orange background */
+  color: #d35400; /* Dark orange text */
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #f39c12; /* Lighter orange for placeholders */
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid #e67e22; /* Medium orange focus */
+  outline-offset: 2px;
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: #e67e22; /* Medium orange button */
+  color: #fff; /* White text */
+  padding: 13px 5px;
+  border-radius: 0.375rem;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-submit:hover {
+  background-color: #d35400; /* Dark orange on hover */
+  transform: translateY(-2px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-submit:active {
+  background-color: #a84300; /* Deep orange on click */
+  transform: translateY(0);
+}
+button {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  margin: 10px auto; /* Center the button horizontally */
+  margin-top: 10px;
+  width: 50%;
+  padding: 0.8rem;
+  background: linear-gradient(
+    to right,
+    var(--primary-darker-color),
+    var(--primary-lighter-color)
+  );
+  color: var(--white);
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+  
+button:hover {
+  background: var(--primary-color);
+}

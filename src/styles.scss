@@ -1,0 +1,192 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$angularstart-chat-primary: mat.define-palette(mat.$orange-palette);
+$angularstart-chat-accent: mat.define-palette(
+  mat.$blue-gray-palette,
+  700,
+  800,
+  900
+);
+
+// The warn palette is optional (defaults to red).
+$angularstart-chat-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angularstart-chat-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angularstart-chat-primary,
+      accent: $angularstart-chat-accent,
+      warn: $angularstart-chat-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($angularstart-chat-theme);
+
+$primary: mat.get-color-from-palette($angularstart-chat-primary, default);
+$primary-lighter: mat.get-color-from-palette(
+  $angularstart-chat-primary,
+  lighter
+);
+$primary-darker: mat.get-color-from-palette($angularstart-chat-primary, darker);
+
+$accent: mat.get-color-from-palette($angularstart-chat-accent, A200);
+$accent-lighter: mat.get-color-from-palette($angularstart-chat-accent, lighter);
+$accent-darker: mat.get-color-from-palette($angularstart-chat-accent, darker);
+
+:root {
+  // theme
+  --primary-color: #{$primary};
+  --primary-lighter-color: #{$primary-lighter};
+  --primary-darker-color: #{$primary-darker};
+  --accent-color: #{$accent};
+  --accent-lighter-color: #{$accent-lighter};
+  --accent-darker-color: #{$accent-darker};
+
+  // custom
+  --white: #ecf0f1;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.gradient-bg {
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 122, 0, 0.9), /* Orange shade with slight transparency */
+      rgba(255, 156, 71, 0.8) 50%, /* Lighter orange at midpoint */
+      rgba(255, 122, 0, 0.9)
+    ),
+    url('https://source.unsplash.com/1600x900/?sunrise,orange,sky');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--white);
+  overflow: hidden; /* Ensure stars or other elements don’t overflow the container */
+}
+
+
+/* Layer 1: Large stars, darker and subtler */
+.gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(200, 200, 255, 0.4) 2px, transparent 3px)
+    10px 10px,
+    radial-gradient(circle, rgba(200, 200, 255, 0.3) 1px, transparent 2px)
+    30px 30px;
+  background-size: 50px 50px;
+  opacity: 0.4;
+  animation: starsMove 60s linear infinite;
+  pointer-events: none;
+}
+
+/* Layer 2: Small, faint stars */
+.gradient-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(180, 180, 255, 0.3) 1px, transparent 2px)
+    5px 5px,
+    radial-gradient(circle, rgba(150, 150, 255, 0.2) 0.5px, transparent 1px)
+    20px 20px;
+  background-size: 30px 30px;
+  opacity: 0.3;
+  animation: starsTwinkle 5s linear infinite alternate;
+  pointer-events: none;
+}
+
+/* Twinkling animation for stars */
+@keyframes starsTwinkle {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Slow movement animation to simulate star drift */
+@keyframes starsMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-15%, -15%);
+  }
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+@keyframes animateInPrimary {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes animateInSecondary {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-in-primary {
+  animation: animateInPrimary;
+  animation: animateInPrimary;
+  animation-duration: 750ms;
+}
+
+.animate-in-secondary {
+  animation: animateInSecondary ease-in 1;
+  animation: animateInSecondary ease-in 1;
+  animation-duration: 750ms;
+}
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

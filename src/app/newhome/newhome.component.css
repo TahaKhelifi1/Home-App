@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #ff7a00; /* Couleur principale */
+    --primary-lighter-color: #ff9c47;
+    --primary-darker-color: #e66a00;
+    --accent-color: #fff3e0; /* Couleur d'accent */
+    --white: #ecf0f1;
+    --dark-gray: #fff3e0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+      to bottom,
+      var(--primary-darker-color),
+      var(--primary-lighter-color)
+
+    );
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+
+  }
+  
+  .container {
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  form {
+    background-color: #fff3e0; 
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1 {
+    background: linear-gradient(
+      45deg,
+      var(--primary-darker-color),
+      var(--primary-lighter-color)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-weight: 600;
+    color: var(--dark-gray);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="file"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    transition: 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="file"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.3);
+  }
+  
+  button {
+    display: block;
+    margin: 10px auto; /* Center the button horizontally */
+    margin-top: 10px;
+    width: 20%;
+    padding: 0.8rem;
+    background: linear-gradient(
+      to right,
+      var(--primary-darker-color),
+      var(--primary-lighter-color)
+    );
+    color: var(--white);
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: var(--primary-color);
+  }
+  
+  .dark-mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #fff3e0;
+    
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .dark-mode-toggle:hover {
+    background: var(--primary-darker-color);
+  }
+  .text-center{
+    text-align: center;
+  }

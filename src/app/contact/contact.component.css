@@ -1,0 +1,222 @@
+#contact {
+    background-color: #fff3e0; /* Light orange background */
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.contact-page-wrapper {
+    max-width: 1070px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page-left {
+    background-color: #e67e22; /* Orange background for the left side */
+    width: calc(50% - 140px);
+    height: calc(100% - 200px);
+    float: left;
+    padding: 100px 70px;
+    color: #fff;
+    position: absolute;
+    border-radius: 50px 0 0 50px;
+
+}
+
+.contact-page-right {
+    width: calc(50% - 140px);
+    height: calc(100% - 200px);
+    float: right;
+    padding: 100px 70px;
+    border-radius: 0 50px 50px 0;
+    background-color: #fff;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contact-info span {
+    margin-right: 45px;
+    font-size: 30px;
+    min-width: 40px;
+    float: left;
+}
+
+.contact-info-content {
+    line-height: 30px;
+    display: table;
+    text-align: left;
+}
+
+.contact-form {
+    max-width: 100%;
+    width: 770px;
+    margin: 0 auto;
+    font-size: 22px;
+    color: #d35400; /* Dark orange text */
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #d35400; /* Dark orange for inputs */
+    border: 0;
+    border-bottom: 1px solid #e67e22; /* Orange border */
+    height: 28px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.contact-form input[type=text]::placeholder,
+.contact-form input[type=email]::placeholder,
+.contact-form textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #d35400; /* Placeholder in dark orange */
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.contact-form textarea {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    padding-top: 8px;
+    overflow: hidden;
+    height: 150px;
+}
+
+
+
+.contact-form input[type=submit] {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    font-weight: 300;
+    border: none;
+    color: #ffffff;
+    background-color: #e67e22; /* Orange background for button */
+    text-align: center;
+    padding-bottom: 17px;
+    padding-top: 17px;
+    padding-left: 40px;
+    padding-right: 75px;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 0px rgba(230, 126, 34, 0.65); /* Orange glow */
+    box-sizing: inherit;
+}
+.section h2.entry-title, .page-template-default.page .section h1.entry-title
+{
+    text-align: center;
+    font-size: 12px;
+    line-height: 34px;
+    color: #e67e22;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5px;
+    background-color: #efe2ff;
+    display: table;
+    margin: 0 auto;
+    padding: 5px 30px 5px 35px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+.page-description
+{
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 700;
+    color: black; /* Orange theme */
+    ;
+}
+.block
+{
+    display: block;
+    text-align: center  ;
+    color: #ff7a00;
+    font-family: 'Poppins', sans-serif;
+}
+.center-relative
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.medium-text
+{
+    font-size: 30px;
+    line-height: 35px;    
+    letter-spacing: 2px;
+    
+}
+.contact-submit-holder
+{
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.contact-submit-holder:after
+{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f061";
+    margin-left: -45px;
+    transition: transform .3s ease;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.contact-submit-holder:hover:after
+{
+    transform: translateX(5px);
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 10px auto; /* Center the button horizontally */
+    margin-top: 10px;
+    width: 50%;
+    padding: 0.8rem;
+    background: linear-gradient(
+      to right,
+      var(--primary-darker-color),
+      var(--primary-lighter-color)
+    );
+    color: var(--white);
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+    
+  button:hover {
+    background: var(--primary-color);
+  }

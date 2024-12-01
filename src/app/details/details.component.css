@@ -1,0 +1,98 @@
+.listing-photo {
+  height: 500px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 30px;
+  float: right;
+  margin-right: 30px;
+}
+.listing-heading1 {
+  font-size: 55px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+.listing-location::before {
+  content: url('/assets/location-pin.svg') / '';
+}
+.listing-location {
+  font-size: 24pt;
+  margin-bottom: 15px;
+}
+.listing-features h2  {
+  color: #d6761d;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.listing-features {
+  margin-bottom: 20px;
+  margin-left:20px; 
+  font-family: 'Poppins', sans-serif;
+}
+.listing-features li {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-left:20px;  
+  color: black;
+}
+.listing-description {
+  font-size: 16pt;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.listing-apply .section-heading {
+  font-size: 18pt;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+label, input {
+  display: block;
+}
+label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+input {
+  font-size: 16pt;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 400px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid .3px;
+}
+@media (max-width: 1024px) {
+  .listing-photo {
+    width: 100%;
+    height: 400px;
+  }
+}
+button[type="submit"] {
+  padding: 15px;
+  background-color: #e67e22; /* Couleur orange pour le bouton */
+  color: #fff;
+  font-size: 16pt;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left:30px; 
+  font-family: 'Poppins', sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: #d35400; /* Couleur orange foncé au survol */
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  background-color: #a84300; /* Couleur orange plus sombre quand cliqué */
+  transform: translateY(0);
+}
